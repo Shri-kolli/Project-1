@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-app
+Spec:
+  selector:
+    name: go-app
+  ports:
+    - protocol: 'TCP'
+      targetPort: 80
+      port: 80
+  type: LoadBalancer
