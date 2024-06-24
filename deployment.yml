@@ -8,8 +8,12 @@ spec:
     matchLabels:
       name: go-app
   template:
-    containers:
-    - name: go-app
-      image: shrikolli/kube-app-107
-      ports:
-        - contianerPort: 80
+    metadata:
+      labels:
+        name: go-app
+    spec:
+      containers:
+      - name: go-app
+        image: shrikolli/kube-app-107
+        ports:
+          - containerPort: 80
